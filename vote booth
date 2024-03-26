@@ -1,0 +1,39 @@
+print("------WELCOME TO THE PROGRM------")
+print('__HERE YOU CAN CHECK YOUR VOTE ELIGIBILITY AND STATUS__')
+print('---to exit the progrm just enter "quit"--- ')
+Exit=input('--do you want to continue or just type "quit" to exit:  ').lower()
+if Exit != "quit":
+    name=input("what's your name:")
+    commard = ""
+    test = False
+    ifTrue = True
+    while ifTrue == True:
+            phone_no=int(len(input("enter your mobile number here :")))
+            if phone_no == 10:
+                test = True
+                print("----VALID NUMBER----") 
+                age=int(input('your age:'))
+                if age>=18:
+                        print(f'your name {name} is present in eligibility list')
+                        print('------THE VOTE BOOTH------')
+                        print('your vote for')
+                        vote=input("type C(csk) or R(rcb) or S(srh) :")
+                        if vote.lower()=="s":
+                            print("you vote for srh")
+                        elif vote.lower()=="c":
+                            print('you vote for csk')
+                        else:
+                            print('you vote for rcb')      
+                        print(F"--- your vote has stored safely {name} ---")
+                        break
+                else:
+                    print("we are sorry,YOUR ARE NOT ELIGIBLE")
+                    print("______THANK YOU FOR TIME_____")
+                    break
+            else:
+                print('---INVALID NUMBER---')
+                print(' invalid! try again..') 
+                ifTrue = False
+else:
+    print('oh! okay')
+    quit()
